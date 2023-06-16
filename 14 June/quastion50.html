@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* case 1 */
+
+        // var num1; // error: undefined
+        // num1=2 // output : 2
+        // {
+        //     console.log(num1);
+        //     // let num1=3 //ReferenceError: Cannot access 'num1' before initialization
+        // }
+
+
+          /* case 2 */
+
+        //   var num1=3; // output : 3
+        //   {
+        //     console.log(num1);
+        //     let num1=4;  //Uncaught ReferenceError: Cannot access 'num1' before initialization
+        //     console.log(num1);
+        //   }
+
+          /* case 3 */
+
+        //   var num; // error : missing initialisation
+        // //   const num;  // error : can not redeclare in same scope
+        //   num=5;
+        //   {
+        //     console.log(num);  // output : 5
+        //     var num=3;
+        //   }
+        //   console.log(num);  // output : 3 
+
+
+           /* CASE 4 */
+
+        //    let num;
+        // //    const num;  //Uncaught SyntaxError: Identifier 'num' has already been declared 
+        // {
+        //     // const num=5; // output : 5
+
+        //     // let num=3;  //Uncaught SyntaxError: Identifier 'num' has already been declared
+        //     num=3; // output : 3 
+        //     console.log(num);
+        // }
+
+           /* CASE 5 */
+
+        //    const net=20;
+        // //    const net;  //Uncaught SyntaxError: Identifier 'net' has already been declared
+        //    {
+        //     // var net=30;  //Uncaught SyntaxError: Identifier 'net' has already been declared 
+        //     console.log(net);  // output : 20
+        //    }
+
+
+            /* CASE 6 */
+
+            let num;  // error : missing initialisatiom
+            num=23;
+            console.log(num);
+        
+
+
+
+            
+
+
+
+    </script>
+</body>
+</html>
