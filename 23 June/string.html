@@ -7,35 +7,160 @@
 </head>
 <body>
     <script>
-        // length
-        var str = "javascript is interpreted language.";
-        var a = str.length;
-        console.log(a);  //35
+         // length
+        // var str = "javascript is interpreted language.";
+        // var a = str.length;
+        // console.log(a);  //35
 
-        //toLowerCase()
-        var str = "javascript is interpreted language.";
-        var a = str.toLowerCase();
-        console.log(a);  //javascript is interpreted language.
+        // //toLowerCase()
+        // var str = "javascript is interpreted language.";
+        // var a = str.toLowerCase();
+        // console.log(a);  //javascript is interpreted language.
 
-        //toUpper Case
-        var str = "javascript is interpreted language.";
-        var a = str.toUpperCase();
-        console.log(a);  //JAVASCRIPT IS INTERPRETED LANGUAGE.
+         //toUpper Case
+        // var str = "javascript is interpreted language.";
+        // var a = str.toUpperCase();
+        // console.log(a);  //JAVASCRIPT IS INTERPRETED LANGUAGE.
 
-        //Includes :- ye search karne ka kaam karta hai or ese agar koi letter yaa word string me dhundhane ke lie diya jata vo vo mil jata hai to ye true and false me javab deta hai. ye case sensitive bhi hota hai yaani ye exectly same word yaa letter ko dhundhata hai agar G hai or mila g to false aayega.
-        var str = "javascript is interpreted language.";
-        var a = str.includes("is");
-        console.log(a);   //true
+        ///Includes :- ye search karne ka kaam karta hai or ese agar koi letter yaa word string me dhundhane ke lie diya jata vo vo mil jata hai to ye true and false me javab deta hai. ye case sensitive bhi hota hai yaani ye exectly same word yaa letter ko dhundhata hai agar G hai or mila g to false aayega.
+        // var str = "javascript is interpreted language.";
+        // var a = str.includes("is"); // true
+        // var a = str.includes("iss"); //false
+        // var a = str.includes("interpreted");  //true
+        // var a = str.includes("Interpreted");  //false
+         // var a = str.includes("ipt");  //true
+        // console.log(a);   
 
-         // startsWith :- ye sirf hamare string me pahle word ko dhundhane me kaam aata hai agar kisi string ka pahla word THE hai to ye true return karega varna false.  
-         var str = "javascript is interpreted language.";
-        var a = str.startsWith("java");
-        console.log(a);  // true
+         // startsWith :- ye sirf hamare string me pahle word ko dhundhane me kaam aata hai agar kisi string ka pahla word THE hai to ye true return karega varna false.  or ye bhi includes ki tarah case-sensitive hota hai yaani ekdam exect match karne ki koshish karta hai.
+        //  var str = "javascript is interpreted language.";
+        // var a = str.startsWith("javascript");  //true
+        // var a = str.startsWith("javaScript");  //false
+        // console.log(a);  
 
-        // startsWith :- ye sirf hamare string me last word ko dhundhane me kaam aata hai agar kisi string ka last word NOW hai to ye true return karega varna false.  
-        var str = "javascript is interpreted language.";
-        var a = str.endsWith("java");
-        console.log(a);  // true
+         // endsWith :- ye sirf hamare string me last word ko dhundhane me kaam aata hai agar kisi string ka last word NOW hai to ye true return karega varna false.   or ye bhi includes ki tarah case-sensitive hota hai yaani ekdam exect match karne ki koshish karta hai.
+        // var str = "javascript is interpreted language.";
+        // var a = str.endsWith("java");
+        // console.log(a);  // false
+
+        // search :- ye bhi includes in tarah hi kaam karta hai but ye true yaa false return nahi karta balki ye us character ki position return karta hai matlab usaka index. or jab use same to same nahi milta to ye -1 return karta hai
+        //  var str = "javascript is interpreted language.";
+        // var a = str.search("is");//11
+        // var a = str.search("javaScript");  //-1
+        // var a = str.search("no");  //-1
+        // console.log(a);  
+
+         // match :- ye bhi exect match karne ki koshish karta hai string me or agar use kuch mil jata hai to ye usaka array bana deta hai. search and match me yahi difference hai ki search sirf apako usaki position return karta hai lekin match same name ka word yaa character hai use baar baar dhundhega or jitani baar usako milega usako vo collect karta jaayega fir usaka ek aaray bana dega .isame fir kisi bhi chij ko search karni hoti hai usako two slashes (//) ke andar likhana hota hai naa ki "" me .fir usaki command likhni hoti hai ki hum use kaise search karna chahte hai. isame ek command hai g yaani globally matlab ye pure string me ye baar baar find kare jaise jaise isako jitani baar find kare vo inako collect karta rahe match function or fir usaka ek array bana dega
+        // var str = "javascript is interpreted is language.";
+        // var a = str.match(/is/g); //['is', 'is']
+        // console.log(a);  
+
+        //indexOf :- ye basically search ki tarah hi kaam karega bas ye hame usaki index bata dega. indexOf ye sttrting se start karega agar use pahla koi is milega to usaka ye index return karega ye next vaale is ko dekhega hi nahi.
+        // var str = "javascript is interpreted is language.";
+        // var a = str.indexOf("is");  //11
+        // console.log(a); 
+
+
+         //lastIndexOf :- ye bilkul indexOf se ulta hai kyuki ye piche ye dhundhna shuru karega or fir jaha par bhi isako is mil jayega to ye usaki position return kar dega
+        // var str = "javascript is interpreted is language.";
+        // var a = str.lastIndexOf("is");  //26
+        // console.log(a); 
+
+         // replace :- isaka use bilkul ek word ko dusare word se replace karne ke liye hota hai.isake andar do parameters aayenge ek vo jise replace karna hai fir dusara parameter vo jisase use replace karna hai vo .pahle vo check bhi karega ki first parameter exist bhi karta hai ki nahi.
+        // var str = "javascript is interpreted is language.";
+        // var a = str.replace("javascript", "PHP");  //PHP is interpreted is language.
+        // var a = str.replace("is", "are");  //javascript are interpreted is language.
+        // var a = str.replace(/is/g, "are");  //javascript are interpreted are language.
+        // console.log(a); 
+
+        // trim :-ye agar kisi string ki extra space aa rahi ho left yaa right me to use hatane ka kaam karta .
+        //  var str = "      interpreted      ";
+        // var a = str.trim(); 
+        // alert(str);
+        // console.log(a);
+
+        //charAt :- isake andar hum ek position define karte hai or us position par jo bhi charactor hoga vo use ye hame return karta hai isaka index 0 se start hoga.ab agar jo bhi position hamne di hai or us par kuch hoga to ye return karega verna kuch bhi return nahi karega blank hi aayega.
+        //  var str = "javascript is interpreted is language.";
+        // var a = str.charAt(4);  //s
+        // var a = str.charAt(400);  //blank aa raha hai
+        // console.log(a); 
+
+        //charCodeAt :- isame hum ek index value denge or us index value par jo bhi charactor aata hoga usaki ascii value hame return kar deta hai.
+        // var str = "javascript is interpreted is language.";
+        // var a = str.charCodeAt(4);   //115
+        // console.log(a); 
+
+          //fromCharCode :- isame hame koi string ki jarurat nahi hoti isame hame koi value number deni hoti hai or usa number par jo bhi character yaa symbol hoga vo hame return karega.
+        //   var a = String.fromCharCode(54);   //6
+        //   var a = String.fromCharCode(600);   //ɘ
+        //   console.log(a); 
+
+        //concat :- es function ka use do yaa do se jyada string ko concat karne ke liye use hota hai yaani jod sakte hai.
+        // var str = "javascript is interpreted  language";
+        // var str2 = 'and amazing '
+        // var a = str.concat(str2);   //javascript is interpreted  languageand amazing .
+        // var str3 = 'that is new .'
+        // var a = str.concat(str2,str3);  //javascript is interpreted  languageand amazing that is new .
+        // console.log(a); 
+
+        //split :- ye function kisi string ke har ek letter ko alag alag karke usaka ek aaray bana deta hai. split yaani tod dena,. isake baad agar ye batana hai ki kaha se split karana hai jaise jaha jaha space hai vaha se split karani hai to brackets me " " dena hoga to vaha vaha se ye split ho jayegi.or agar hum chahte hai ki ye jaha jaha i aa raha ho vaha vaha se split ho jaye to bracket me "i" dena hoga.
+        // var str = "javascript is interpreted is language.";
+        // var a = str.split('r');  //['javasc', 'ipt is inte', 'p', 'eted is language.']
+        // console.log(a); 
+
+        //repeat :- isaka kaam yahi hai ki ye hamare string ko kitani bhi baar repeat kara sakta hai 
+        //  var str = "javascript is interpreted is language.";
+        // var a = str.repeat(4);  //javascript is interpreted is language.javascript is interpreted is language.javascript is interpreted is language.javascript is interpreted is language.
+        // console.log(a); 
+
+        //slice :- isake use se hum kisi string me se agar koi word uthana ho yaa koi charactor uthana ho jisame hum position denge ki kaha se kaha tak uthana hai to vo hum kar sakte hai . isame do parameter aate hai starting and ending. index 0 se start hogi .
+        // var str = "javascript is interpreted is language.";
+        // var a = str.slice(3); //ascript is interpreted is language.
+        // var a = str.slice(3,10);  //ascript
+        // var a = str.slice(-1);  //.
+        // var a = str.slice(-2);  //e.
+        // console.log(a); 
+
+        //substr :- ye bhi slice ki tarah hi kaam karta hai isame agar koi value de ki 2 to ye do ke baad ka saara string print kara dega.
+        //  var str = "javascript is interpreted is language.";
+        // var a = str.substr(4);  //script is interpreted is language.
+        // var a = str.substr(4,14);  //script is inte
+        // console.log(a); 
+
+        //substring :- ye kafi had tak slice ki tyarah hi kaam karta hai .isame agar koi value dete hai jaise (3,5) to ye 3and 4 par jo hoga use print karega but 5 par jo hoga use print nahi karega.
+        // var str = "javascript is interpreted is language.";
+        // var a = str.substring(4,6);  //sc
+        // var a = str.substr(4,14);  //script is inte
+        // console.log(a); 
+
+        //toString :- isame hamari jo bhi value hogi vo chahe number me hi ho to ye use string me badal deta hai.
+        // var str = 80;
+        // var a = str.toString();  //80
+        // console.log(a + 67);   //8067
+        // console.log(str + 67);  //147
+
+        //valueOf() :- ye ek default function hai isaka use string ko vaisa k vaisa print karane ke lie hota hai.
+        var str = "javascript is interpreted is language.";
+        var a = str.valueOf();  
+        console.log(a); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     </script>
