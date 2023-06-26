@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // length
+        var str = "javascript is interpreted language.";
+        var a = str.length;
+        console.log(a);  //35
+
+        //toLowerCase()
+        var str = "javascript is interpreted language.";
+        var a = str.toLowerCase();
+        console.log(a);  //javascript is interpreted language.
+
+        //toUpper Case
+        var str = "javascript is interpreted language.";
+        var a = str.toUpperCase();
+        console.log(a);  //JAVASCRIPT IS INTERPRETED LANGUAGE.
+
+        //Includes :- ye search karne ka kaam karta hai or ese agar koi letter yaa word string me dhundhane ke lie diya jata vo vo mil jata hai to ye true and false me javab deta hai. ye case sensitive bhi hota hai yaani ye exectly same word yaa letter ko dhundhata hai agar G hai or mila g to false aayega.
+        var str = "javascript is interpreted language.";
+        var a = str.includes("is");
+        console.log(a);   //true
+
+         // startsWith :- ye sirf hamare string me pahle word ko dhundhane me kaam aata hai agar kisi string ka pahla word THE hai to ye true return karega varna false.  
+         var str = "javascript is interpreted language.";
+        var a = str.startsWith("java");
+        console.log(a);  // true
+
+        // startsWith :- ye sirf hamare string me last word ko dhundhane me kaam aata hai agar kisi string ka last word NOW hai to ye true return karega varna false.  
+        var str = "javascript is interpreted language.";
+        var a = str.endsWith("java");
+        console.log(a);  // true
+
+
+    </script>
+</body>
+</html>
